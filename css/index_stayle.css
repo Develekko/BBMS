@@ -2,10 +2,14 @@
 
 .seform
 {
-    margin-top: 30px;
+    margin-top: 25px;
     border-radius: 5%;
 }
 
+.fixmar
+{
+    margin-top: 150px;
+}
 .si
 {
     
@@ -14,8 +18,8 @@
     color: black;
 }
 .form-control
-{
-    width: 600px;
+{   
+    width: 400px;
     margin: auto;
     height: 40px;
     margin-bottom: 20px;
@@ -25,7 +29,7 @@
 }
 .fixsign
 {
-    width: 450px;
+    width: 350px;
 }
 .form-row
 {

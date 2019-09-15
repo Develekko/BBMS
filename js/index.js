@@ -74,12 +74,15 @@ $(window).scroll(function()
     if(scrollTop > 600)
         {
             $("#btnUp").fadeIn(500)
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            $(".dark").hide(0)
         }
     else
         {
             $("#btnUp").fadeOut(500)
         }
-
+    
 
 })
 
@@ -95,7 +98,7 @@ $("#menu").click(function(){
 
 
 $(".closebtn").click(function(){
-    $(".dark").fadeToggle(1000)
+    $(".dark").fadeOut(1000)
 })
 
 $("#mySidenav a").not(".closebtn").click(function(){
@@ -113,6 +116,8 @@ $("#mySidenav a").not(".closebtn").click(function(){
 
 
 
+
+$('[data-aos]').parent().addClass('hideOverflowOnMobile');
 
 
 
