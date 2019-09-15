@@ -1,4 +1,16 @@
 new WOW().init();
+setTimeout(function(){
+$("#loading").fadeOut(3000,"linear",function(){
+    $("body").css({overflowY:'auto'});
+    $("#loading").css({display:'none'});
+ 
+
+});
+});
+   
+
+
+
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -57,18 +69,50 @@ $(window).scroll(function()
     }
     factsflag = false;
 }
+     let scrollTop = $(window).scrollTop();
+    
+    if(scrollTop > 600)
+        {
+            $("#btnUp").fadeIn(500)
+        }
+    else
+        {
+            $("#btnUp").fadeOut(500)
+        }
 
 
 })
 
-
+$("#btnUp").click(function(){
+    
+    $("body","html").animate({scrollTop:"0"},2000)
+})
 
 $("#menu").click(function(){
-    $(".dark").toggle(1000)
+    $(".dark").fadeToggle(1000)
 })
 
 
 
 $(".closebtn").click(function(){
-    $(".dark").toggle(1000)
+    $(".dark").fadeToggle(1000)
 })
+
+$("#mySidenav a").not(".closebtn").click(function(){
+
+     let ahref =  $(this).attr('href');
+    let offsetz = $(`${ahref}`).offset().top;
+   
+    $("body, html").animate({scrollTop: offsetz},1500);
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    $(".dark").fadeToggle(1000)
+    
+
+})
+
+
+
+
+
+

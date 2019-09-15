@@ -3,23 +3,60 @@
 {
   margin: 0;
   padding: 0;
-    transition: 2s;
+    transition: all 1s;
+    
+}
+.over-lay
+{
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    display: none;
 }
 #about
 {
-    background-image: url(../image/abstract-background-design_1297-82.jpg);
-    background-size: cover;
+    background-color: white;
     overflow: hidden;
+}
+
+.about img
+{
+    transition: transform .5s;
+}
+
+.img-move
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.img-scale:hover{
+    transform: scale(1.05);
+    opacity:.9;
+}
+.img-about
+{
+    overflow: hidden;
+}
+
+
+.img-move img
+{
+    border-radius: 1%;
+    transition: transform .5s;
 }
 .about-caption h2
 {
-    color: red;
+    color: #EF3D32;
 }
 #contacts
 {
-    background-image: url(../image/black-red-wallpaper-designs-14.jpg);
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: white;
     padding-top: 7px;
 }
 
@@ -60,12 +97,12 @@
 }
 .btn-color
 {
-    background-color: red;
+    background-color: #EF3D32;
     color: white;
 }
 .btn-color:hover
 {
-    background-color: red;
+    background-color: #EF3D32;
     color: black;   
 }
 .copyright
@@ -100,19 +137,24 @@
 }
 .icolor:hover
 {
-    color: red;
+    color: #EF3D32;
 }
 
 #home
 {
    
-    background-image: url(../image/black-red-wallpaper-designs-14.jpg);
-    background-attachment: fixed;
+    background-color:#f5f5f5;
     background-size: cover;
     height: 100vh;
     padding-top: 20px;
     padding-bottom: 50px;
     
+}
+
+.blood-h1
+{
+    color: black;
+
 }
 .search-form
 {
@@ -132,7 +174,7 @@
 }
 
 .sidenav {
-    background-color: #F8422C;
+    background-color: white;
 }
 .sidenav {
     height: 100%;
@@ -143,7 +185,7 @@
     left: 0;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 50px;
 }
 .sidenav a:hover{
     color: black;
@@ -154,16 +196,17 @@
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    color: black;
 }
 
 .sidenav a {
-    padding: 20px 8px 20px 32px;
+    padding: 10px 8px 20px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s;
-    color: white;
+    color: #EF3D32;
 }
 #main
 {
@@ -188,17 +231,10 @@
     
 }
 
-
-
 #facts
 {
   width: 100%;
-
- 
 }
-
-
-
 .facts-item h2{
   text-align: center;
 }
@@ -206,9 +242,11 @@
 {
   padding-top: 10px;
   padding-bottom: 30px;
-  background-image: url(../image/black-red-wallpaper-designs-14.jpg);
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  background-color: #f5f5f5;
+}
+.facts-layer h1
+{
+    color: black;
 }
 .facts-item
 {
@@ -217,27 +255,38 @@
   text-align: center;
   border-radius: 10px;
   margin: 30px 0px;
+  background-color: white;
 }
 .facts-item h2{
-  color: red;
+    color: #EF3D32;
   font-size: 48;
 }
 .facts-item h4{
-  color: white;
+  color: black;
   font-size: 18px;
 }
 .facts-item i
 {
-  color: white;
+  color: black;
   font-size: 36px;
   margin-bottom: 10px;
-  
-
+  transition: 1s;
+}
+.facts-item:hover i
+{
+    color: #EF3D32;
+    transform: scale(1.2,1.2); 
 }
 .facts-item .i-mod
 {
-  color: red;
+    color: #EF3D32;
   font-size: 36px;
+  transition: 1s;
+}
+.facts-item:hover .i-mod
+{
+    color: black;  
+    transform: scale(1.2,1.2);
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px)
@@ -246,15 +295,11 @@
    height: 250px;
   }
 }
-.color-type
-{
-    background-image: url(../image/dark-faded-background-6.jpg);
-    background-size: cover;
-    padding-bottom: 79px;
-}
+
+
 .blood-info
 {
-    background-color: currentColor;
+    background-color:#f5f5f5;
     height: 350px;
     margin-bottom: 10px;
     position: relative;
@@ -269,6 +314,7 @@ background-color: rgba(238,238,238,0.2);
     width: 100%;
     height: 100%;
     padding: 20px;
+    text-align: left;
     
 }
 .blood-info:hover .item
@@ -385,6 +431,7 @@ ul li
 body
 {
     overflow-x: hidden;
+    overflow: hidden;
 }
 .img-cont
 {
@@ -397,10 +444,6 @@ body
     border-radius: 5px;
     margin-bottom: 150px !important;
    
-}
-
-body{
-    background-color: black;
 }
 
 
@@ -454,11 +497,6 @@ body{
 {
     position: relative;
 }
-
-#about
-{
-background-image: url(../image/dark-faded-background-6.jpg)
-}
 .search-in
 {
     position: relative;
@@ -467,6 +505,7 @@ background-image: url(../image/dark-faded-background-6.jpg)
     position: absolute;
     top: 40%;
     right: 28%;
+    color: black;
 }
 #blood-types .row
 {
@@ -480,7 +519,7 @@ background-image: url(../image/dark-faded-background-6.jpg)
 
 .btn-sign-up
 {
-    background-color: darkred;
+    background-color: #EF3D32;
     color: white;
 }
 .copyright a
@@ -488,5 +527,250 @@ background-image: url(../image/dark-faded-background-6.jpg)
     text-decoration: none;
 }
 
+/*Donation process*/
 
 
+
+#donation-process img
+{
+width:100%;
+height: 300px;
+margin-bottom: 20px;
+border-radius: 10px;
+transition: 1s;
+}
+#donation-process
+{
+    background-color: white;
+}
+.process-item
+{
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    position: relative;
+    padding-bottom: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    
+}
+#donation-process img:hover {
+    transform: scale(1.1,1.1);
+}
+.process-item p{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.item-number
+{
+    height: 75px;
+    width: 75px;
+    border-radius: 5px;
+    background-color: #EF3D32;
+    position: absolute;
+    top:0;
+    right: 0;
+    display: flex;
+    color: white;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.process-item h2{
+    margin-left: 10px;
+}
+
+.process-item:hover h2
+{
+    color: #EF3D32
+}
+
+
+
+
+/* end of donation process*/
+
+
+#Good-to-know
+{
+    background-color:#f5f5f5;
+}
+
+#join
+{
+    background-color: #f5f5f5;
+}
+.login
+{
+    color: white;
+    height: 50px;
+    width: 150px;
+    background-color: #EF3d32;
+    border: none; 
+}
+.sign
+{
+    color: white;
+    background-color: #EF3d32;
+    border: none;
+    height: 50px;
+    width: 150px;
+    
+}
+.sign a
+{
+    color: white;
+    text-decoration: none;
+}
+.login a
+{
+    color: white;
+    text-decoration: none;
+}
+
+
+.joinflex
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.login:hover{
+    color: #EF3D32;
+    border: 1px solid #EF3D32;
+    background-color: white
+}
+.sign:hover{
+    color: #EF3D32;
+    border: 1px solid #EF3D32;
+    background-color: white;
+}
+#btnUp
+{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999999;
+    display: none;
+    height: 50px;
+}
+.btnup
+{
+    background-color: #EF3D32;
+    font-size: 20px;
+    
+}
+/*loading*/
+
+
+
+.rhombus2 {
+   
+    /*background: #fcfcfc;*/
+   
+   
+    border-radius: 10px;
+    height: 75px;
+    width: 75px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-delay: 0.9s;
+    animation-duration: 0.8s;
+    animation-name: pump;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.26,-0.53,.57,2.32);
+}
+
+.rhombus2:before {
+    content: "";
+    position: absolute;
+    background: #EF3D32;
+    height: 40px;
+    width: 40px;
+    z-index: 0;
+    margin-top: 15px;
+    margin-left: 15px;
+    transform: rotate(45deg);
+}
+
+.rhombus2 .circle21 {
+    content: "";
+    position: absolute;
+    background: #EF3D32;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    border-radius: 50%;
+    /*animation-direction: alternate;*/
+}
+
+.rhombus2 .circle22 {
+    content: "";
+    position: absolute;
+    background: #EF3D32;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    margin-left: 30px;
+    border-radius: 50%;
+    /*animation-direction: alternate;*/
+}
+
+@keyframes pump {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes change1 {
+    0%,
+    25% {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    50%,
+    75% {
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+}
+
+@keyframes change2 {
+    25%,
+    50% {
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+    75%,
+    100% {
+        margin-top: 0px;
+        margin-left: 30px;
+    }
+}
+
+
+#loading
+{
+    height: 100vh;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    z-index: 100000000000000000;
+    opacity: 1;
+    transition: 0.5s ease-out;
+}
+
+
+
+/* end of loading    */

@@ -1,48 +1,55 @@
 
 
-body
-{
-    background-color: black;
- 
-}
-
 .seform
 {
-    
-    background-color: white;
-    width: 600px;
-    margin: auto;
     margin-top: 30px;
-    padding: 30px;
     border-radius: 5%;
 }
 
 .si
 {
     
-    margin-left: 40%;
+    text-align: center;
+    padding-bottom: 30px;
+    color: black;
 }
 .form-control
 {
-    
+    width: 600px;
+    margin: auto;
     height: 40px;
     margin-bottom: 20px;
     border-radius: 20px;
     
     
 }
+.fixsign
+{
+    width: 450px;
+}
 .form-row
 {
     margin: 20px;
+    margin: auto;
+    text-align: center;
     
 }
 
-.btn-primary
+.btnlogin
 {
     height: 40px;
     width: 300px;
+    color: white;
     border-radius:20px;
-    margin-left:70px;
     margin-top: 10px;
-    background-color: deepskyblue;
+    background-color: #EF3D32;
+    border: black;
+    Outline:none
+}
+
+.btnlogin:hover
+{
+    background-color: white;
+    color: #EF3D32;
+    border: 1px solid #EF3D32;
 }
